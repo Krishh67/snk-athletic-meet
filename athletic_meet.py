@@ -36,7 +36,7 @@ if select_school:
 
                 st.write("###### 100m Time: *ss.ms*")
                 st.write("###### 200m Time: *ss.ms OR m.ss.ms*")
-                st.write("####### If any of your event time is displayed as None, it indicates that your performance time was not recorded due to certain reasons.")
+                st.write("###### If any of your event time is displayed as None, it indicates that your performance time was not recorded due to certain reasons.")
                 
                 "---"
                 # Display top 8 students for events
