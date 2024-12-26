@@ -44,14 +44,14 @@ if select_school:
                 
                 st.write("### 100m Running")
                 table1 = merged_df[(merged_df["Unit"] == selected_student_data["Unit"].values[0]) & 
-                                   (merged_df["Std"] == select_grade) & 
+                                   (merged_df["Std"] == select_grade) & (merged_df["School"] == select_school) &
                                    (merged_df["Gender"] == selected_student_data["Gender"].values[0])][["Name","Std","Sec","Unit","Gender","House","100m"]]
                 table1 = table1.nsmallest(8, '100m', keep='all').dropna(subset=['100m'])
                 st.dataframe(table1, use_container_width=True, hide_index=True)
                 
                 st.write("### 200m Running")
                 table21 = merged_df[(merged_df["Unit"] == selected_student_data["Unit"].values[0]) & 
-                                    (merged_df["Std"] == select_grade) & 
+                                    (merged_df["Std"] == select_grade) & (merged_df["School"] == select_school) &
                                     (merged_df["Gender"] == selected_student_data["Gender"].values[0])][["Name","Std","Sec","Unit","Gender","House","200m","200m(s)"]]
                 table21 = table21.nsmallest(8, '200m(s)', keep='all').dropna(subset=['200m(s)'])
                 st.dataframe(table21, column_config={"200m(s)": None}, use_container_width=True, hide_index=True)
